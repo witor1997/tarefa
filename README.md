@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lista de Tarefas
 
-## Getting Started
+Projeto em Next.js para gerenciamento de tarefas com foco em simplicidade, organização e um visual mais moderno.
 
-First, run the development server:
+## O que o app faz
+
+- Exibe uma lista inicial de tarefas.
+- Permite adicionar novas tarefas com título, descrição e status de conclusão.
+- Permite remover tarefas.
+- Permite marcar e desmarcar tarefas como concluídas.
+- Usa um hook separado para contar quantas tarefas estão concluídas.
+
+## Estrutura principal
+
+- `src/app/page.tsx`: página inicial.
+- `src/app/component/tarefaclient.tsx`: estado principal da lista e integração entre componentes.
+- `src/app/component/novatarefa.tsx`: formulário de criação de tarefas.
+- `src/app/component/ListaDeTarefas.tsx`: renderização da lista.
+- `src/hooks/useContadorDeTarefas.ts`: hook que calcula o total de tarefas concluídas.
+- `src/app/data/tarefa.ts`: dados iniciais exibidos na página.
+
+## Como executar
+
+Dentro da pasta do projeto, rode:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Depois abra:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como testar
 
-## Learn More
+```bash
+npm test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Descrição do visual
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A interface foi organizada com um layout centralizado em formato de painel, com fundo em gradiente, cartões com bordas suaves e estilos mais contrastantes para melhorar a leitura e a navegação.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tecnologias usadas
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js
+- React
+- TypeScript
+- Vitest
+- React Testing Library
