@@ -1,4 +1,4 @@
-# Lista de Tarefas
+ # Lista de Tarefas
 
 Projeto em Next.js para gerenciamento de tarefas com foco em simplicidade, organização e um visual mais moderno.
 

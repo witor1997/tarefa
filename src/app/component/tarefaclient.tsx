@@ -22,11 +22,9 @@ export default function TarefaClient({ tarefasIniciais }: Props) {
 		setTarefas((tarefasAtuais) => tarefasAtuais.filter((tarefa) => tarefa.id !== id));
 	};
 
-	const atualizarTarefa = (id: number) => {
+	const atualizarTarefa = (id: number, tarefaAtualizada: Tarefa) => {
 		setTarefas((tarefasAtuais) =>
-			tarefasAtuais.map((tarefa) =>
-				tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa,
-			),
+			tarefasAtuais.map((tarefa) => (tarefa.id === id ? tarefaAtualizada : tarefa)),
 		);
 	};
 
