@@ -66,20 +66,14 @@ export default function ListaDeTarefas({ tarefas, removerTarefa, atualizarTarefa
                     />
                   </label>
                 <label className={styles.checkboxLinha}>
-                    <input
-                      type="checkbox"
-                      checked={formulario.concluida}
-                      onChange={(event) => alterarCampo('concluida', event.target.checked)}
-                    />
-                        <label className={styles.checkboxLinha}>
-          
-                        <label className={styles.checkboxLinha}>
-                
-                  </label>
-                  </label>
-                    Concluída
-                  </label>
-                  <div className={styles.botoesEdicao}>
+  <input
+    type="checkbox"
+    checked={formulario.concluida}
+    onChange={(event) => alterarCampo('concluida', event.target.checked)}
+  />
+  Concluída
+</label>
+                <div className={styles.botoesEdicao}>
                     <button className={styles.botaoAtualizar} onClick={salvarEdicao}>Salvar</button>
                     <button className={styles.botaoRemover} onClick={cancelarEdicao}>Cancelar</button>
                   </div>

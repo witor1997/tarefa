@@ -29,6 +29,15 @@ export default function NovaTarefa({ adicionarTarefa }: Props) {
     setDescricao('');
     setConcluida(false);
   };
+  <label className={styles.checkboxLabel}>
+        <input
+          className={styles.checkbox}
+          type="checkbox"
+          checked={concluida}
+          onChange={(event) => setConcluida(event.target.checked)}
+        />
+        Concluída
+      </label>
 
   return (
     <section className={styles.container}>
@@ -51,6 +60,14 @@ export default function NovaTarefa({ adicionarTarefa }: Props) {
 
         
 
+        <label>
+          <input
+            type="checkbox"
+            checked={concluida}
+            onChange={(event) => setConcluida(event.target.checked)}
+          />
+          Concluída
+        </label>
         <button className={styles.button} type="submit" disabled={!titulo.trim()}>
           Adicionar
         </button>
